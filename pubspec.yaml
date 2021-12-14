@@ -1,0 +1,11 @@
+name: sentrify
+version: 1.0.0
+
+environment:
+  sdk: '>=2.14.0 <3.0.0'
+
+dependencies:
+  dcli: ^1.7.1
+  dart_ipify: ^1.1.1
+  znn_sdk_dart:
+    path: ./packages/znn_sdk_dart
