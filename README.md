@@ -41,12 +41,14 @@ Add 16 GB of swap so the node can process any block and won't get stuck for too 
 
 `fallocate -l 16G /swapMem && chmod 600 /swapMem && mkswap /swapMem && swapon /swapMem && echo '/swapMem none swap sw 0 0' | tee -a /etc/fstab`
 
-#### Transfer producer keystore and config.json to the pillar
-```
-mkdir -p /root/.znn/wallet
-scp /root/.znn/config.json root@ip:/root/.znn
-scp /root/.znn/wallet/producer root@ip:/root/.znn/wallet/
-```
+#### Transfer producer keystore and config.json to the pillar (only if using a new vps)
+
+`mkdir -p /root/.znn/wallet` - on the new pillar vps
+
+
+`scp /root/.znn/config.json root@ip:/root/.znn` - on the old pillar vps, change ip with the new pillar vps ip
+`scp /root/.znn/wallet/producer root@ip:/root/.znn/wallet/` on the old pillar vps, change ip with the new pillar vps ip
+
 
 #### Use controller to download znnd and create service
 `./znn-controller` and choose option `2 (deploy)` - to download znnd and create the service
