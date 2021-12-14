@@ -45,7 +45,7 @@ Add 16 GB of swap so the node can process any block and won't get stuck for too 
 ```
 mkdir -p /root/.znn/wallet
 scp /root/.znn/config.json root@ip:/root/.znn
-scp /roo/.znn/wallet/producer root@ip:/root/.znn/wallet/
+scp /root/.znn/wallet/producer root@ip:/root/.znn/wallet/
 ```
 
 #### Use controller to download znnd and create service
