@@ -78,7 +78,7 @@ repeat for all your sentries
 ssh, dns (so controller works) and your sentries
 
 #### Enable firewall
-`ufw allow` - then `y` - don't worry, will not interrupt your `ssh`
+`ufw enable` - then `y` - don't worry, will not interrupt your `ssh`
 
 #### Start node
 `./znn-controller` and choose option `4 (startService)`
